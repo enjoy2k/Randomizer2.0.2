@@ -27,3 +27,4 @@ class SettingsViewController: UIViewController {
         dismiss(animated: true)
     }
 }
+let hello = "Hello"
