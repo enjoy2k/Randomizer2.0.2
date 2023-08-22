@@ -8,23 +8,17 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    
     @IBOutlet weak var minValueTF: UITextField!
     @IBOutlet weak var maxValueTF: UITextField!
     
-    var minimumValue: String!
-    var maximumValue: String!
+    var randomNumberSt: RandomNumber!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        minValueTF.text = minimumValue
-        maxValueTF.text = maximumValue
+    
     }
     
     
-    @IBAction func cancelButtonPressed() {
-        dismiss(animated: true)
-    }
+    
 }
-

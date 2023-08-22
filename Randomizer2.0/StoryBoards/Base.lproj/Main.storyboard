@@ -11,7 +11,7 @@
         <!--Random Number-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Randomizer2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Randomizer2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,20 +94,37 @@
                     <navigationItem key="navigationItem" title="Random Number" id="b48-Kj-j83">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="aEI-3i-FWz">
                             <connections>
-                                <segue destination="kvd-h5-n1H" kind="presentation" modalPresentationStyle="pageSheet" id="c3H-4G-TgN"/>
+                                <segue destination="G6m-hr-thE" kind="presentation" id="4WI-nM-SuL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="maxNumberLabelVC" destination="X8x-VL-xW4" id="qNo-rV-sUT"/>
-                        <outlet property="minNumberLabelVC" destination="2sj-BE-AuN" id="jsT-p7-O34"/>
-                        <outlet property="randomNuberLabel" destination="lxU-A9-2Mh" id="Iek-20-3dq"/>
+                        <outlet property="maximumValueLabel" destination="X8x-VL-xW4" id="qNo-rV-sUT"/>
+                        <outlet property="minimumValueLabel" destination="2sj-BE-AuN" id="jsT-p7-O34"/>
+                        <outlet property="randomValueLabel" destination="lxU-A9-2Mh" id="Iek-20-3dq"/>
                         <outlet property="resultButton" destination="0Jn-Ul-t0W" id="BMG-ZZ-FOy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050.6976744186047" y="-3.218884120171674"/>
+            <point key="canvasLocation" x="1108" y="-2"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WPx-Gy-7fV">
+            <objects>
+                <navigationController id="G6m-hr-thE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gFJ-RU-qyP"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hNZ-EZ-XZB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kvd-h5-n1H" kind="relationship" relationship="rootViewController" id="vAW-Rh-yEI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L9K-Pu-LtY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1864" y="-2"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="ZPw-hs-3qR">
@@ -118,7 +135,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="fMH-n7-Zho">
-                                <rect key="frame" x="60" y="56" width="200" height="108"/>
+                                <rect key="frame" x="60" y="156" width="200" height="108"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o35-lH-CvO">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
@@ -132,40 +149,22 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fXY-kE-FTX">
-                                <rect key="frame" x="107.5" y="217.5" width="105.5" height="113"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6h1-jO-PyH">
-                                        <rect key="frame" x="0.0" y="0.0" width="105.5" height="46.5"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Save">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="27"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="lwO-W8-Bkb" kind="unwind" unwindAction="unwindFor:" id="P1i-yF-GwJ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nW8-A8-TGt">
-                                        <rect key="frame" x="0.0" y="66.5" width="105.5" height="46.5"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Cancel">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="27"/>
-                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="cancelButtonPressed" destination="kvd-h5-n1H" eventType="touchUpInside" id="XNn-rr-gyK"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YbH-C5-Ls6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="gVO-ji-nQ9">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="qxH-eZ-78B"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="BdB-SH-evK"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LBn-SN-Qs0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fMH-n7-Zho" firstAttribute="top" secondItem="LBn-SN-Qs0" secondAttribute="top" constant="56" id="1eb-bP-TFU"/>
+                            <constraint firstItem="fMH-n7-Zho" firstAttribute="top" secondItem="LBn-SN-Qs0" secondAttribute="top" constant="100" id="1eb-bP-TFU"/>
                             <constraint firstItem="fMH-n7-Zho" firstAttribute="leading" secondItem="LBn-SN-Qs0" secondAttribute="leading" constant="60" id="1wN-ML-4S5"/>
-                            <constraint firstItem="fXY-kE-FTX" firstAttribute="centerX" secondItem="tCM-u3-cn7" secondAttribute="centerX" id="7BK-sC-LHR"/>
-                            <constraint firstItem="fXY-kE-FTX" firstAttribute="centerY" secondItem="tCM-u3-cn7" secondAttribute="centerY" id="PCu-hs-UHb"/>
                             <constraint firstItem="LBn-SN-Qs0" firstAttribute="trailing" secondItem="fMH-n7-Zho" secondAttribute="trailing" constant="60" id="kWe-OL-3FJ"/>
                         </constraints>
                     </view>
@@ -176,9 +175,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RxE-LK-mmq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="lwO-W8-Bkb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2535" y="-2"/>
+            <point key="canvasLocation" x="2638" y="-2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V7F-4k-Qv0">
@@ -208,9 +206,6 @@
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
