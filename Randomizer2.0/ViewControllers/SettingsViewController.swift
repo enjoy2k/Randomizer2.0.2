@@ -7,15 +7,20 @@
 
 import UIKit
 
+
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var minValueTF: UITextField!
     @IBOutlet weak var maxValueTF: UITextField!
     
     var randomNumberSt: RandomNumber!
+    var delegate: SettingsViewControllerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        minValueTF.delegate = self
+        maxValueTF.delegate = self
         minValueTF.text = String(randomNumberSt.minimumValue)
         maxValueTF.text = String(randomNumberSt.maximumValue)
     }
@@ -24,6 +29,22 @@ class SettingsViewController: UIViewController {
         dismiss(animated: true)
     }
     @IBAction func savelButtonPressed() {
+        delegate.setNewValues(for: minValueTF.text ?? "0", and: maxValueTF.text ?? "100")
         dismiss(animated: true)
     }
 }
+
+extension SettingsViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let newValue = textField.text else { return }
+        guard let numberValue = Int(newValue) else { return }
+        
+        if textField == minValueTF {
+            randomNumberSt.minimumValue = numberValue
+        } else {
+            randomNumberSt.maximumValue = numberValue
+        }
+    }
+}
+
+// Остановился на 2.43

@@ -94,7 +94,7 @@
                     <navigationItem key="navigationItem" title="Random Number" id="b48-Kj-j83">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="aEI-3i-FWz">
                             <connections>
-                                <segue destination="G6m-hr-thE" kind="presentation" id="4WI-nM-SuL"/>
+                                <segue destination="erb-uD-YHL" kind="presentation" id="IKH-bB-5w5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -110,81 +110,75 @@
             <point key="canvasLocation" x="1108" y="-2"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="WPx-Gy-7fV">
+        <scene sceneID="hMf-U5-ZEX">
             <objects>
-                <navigationController id="G6m-hr-thE" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="gFJ-RU-qyP"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hNZ-EZ-XZB">
+                <navigationController id="erb-uD-YHL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ETO-p2-4Ed"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wk6-qe-5kn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="kvd-h5-n1H" kind="relationship" relationship="rootViewController" id="vAW-Rh-yEI"/>
+                        <segue destination="ryy-xS-MjM" kind="relationship" relationship="rootViewController" id="cYb-Ie-9yj"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L9K-Pu-LtY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P1n-qE-GiZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864" y="-2"/>
+            <point key="canvasLocation" x="1853" y="-2"/>
         </scene>
         <!--Settings View Controller-->
-        <scene sceneID="ZPw-hs-3qR">
+        <scene sceneID="ieD-p6-U6a">
             <objects>
-                <viewController id="kvd-h5-n1H" customClass="SettingsViewController" customModule="Randomizer2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tCM-u3-cn7">
+                <viewController id="ryy-xS-MjM" customClass="SettingsViewController" customModule="Randomizer2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oPV-T3-YzX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="fMH-n7-Zho">
-                                <rect key="frame" x="60" y="156" width="200" height="108"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="vuZ-KH-cjd">
+                                <rect key="frame" x="40" y="156" width="240" height="119"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o35-lH-CvO">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EvP-zP-3j0">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Maximum value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pzD-7I-q04">
-                                        <rect key="frame" x="0.0" y="74" width="200" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Maximum Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPU-NU-0gR">
+                                        <rect key="frame" x="0.0" y="85" width="240" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YbH-C5-Ls6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="gVO-ji-nQ9">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="qxH-eZ-78B">
-                                            <connections>
-                                                <action selector="cancelButtonPressed" destination="kvd-h5-n1H" id="xhQ-7B-OIh"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="BdB-SH-evK">
-                                            <connections>
-                                                <action selector="savelButtonPressed" destination="kvd-h5-n1H" id="zWk-lt-gLL"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="LBn-SN-Qs0"/>
+                        <viewLayoutGuide key="safeArea" id="2F0-0X-148"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fMH-n7-Zho" firstAttribute="top" secondItem="LBn-SN-Qs0" secondAttribute="top" constant="100" id="1eb-bP-TFU"/>
-                            <constraint firstItem="fMH-n7-Zho" firstAttribute="leading" secondItem="LBn-SN-Qs0" secondAttribute="leading" constant="60" id="1wN-ML-4S5"/>
-                            <constraint firstItem="LBn-SN-Qs0" firstAttribute="trailing" secondItem="fMH-n7-Zho" secondAttribute="trailing" constant="60" id="kWe-OL-3FJ"/>
+                            <constraint firstItem="2F0-0X-148" firstAttribute="trailing" secondItem="vuZ-KH-cjd" secondAttribute="trailing" constant="40" id="5bN-eW-kIO"/>
+                            <constraint firstItem="vuZ-KH-cjd" firstAttribute="top" secondItem="2F0-0X-148" secondAttribute="top" constant="100" id="FKY-se-i7A"/>
+                            <constraint firstItem="vuZ-KH-cjd" firstAttribute="centerX" secondItem="oPV-T3-YzX" secondAttribute="centerX" id="Ish-kK-F29"/>
+                            <constraint firstItem="vuZ-KH-cjd" firstAttribute="leading" secondItem="2F0-0X-148" secondAttribute="leading" constant="40" id="R71-cB-MGu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="OlS-VN-F0C"/>
+                    <navigationItem key="navigationItem" id="Jbr-LG-S7b">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="S8c-p3-yd9">
+                            <connections>
+                                <action selector="cancelButtonPressed" destination="ryy-xS-MjM" id="Nb7-Lk-6WI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="q5Z-bD-NZh">
+                            <connections>
+                                <action selector="savelButtonPressed" destination="ryy-xS-MjM" id="WfV-BP-UWe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="maxValueTF" destination="pzD-7I-q04" id="XwE-hA-9WN"/>
-                        <outlet property="minValueTF" destination="o35-lH-CvO" id="NJa-lA-fYj"/>
+                        <outlet property="maxValueTF" destination="iPU-NU-0gR" id="9wI-sl-PFQ"/>
+                        <outlet property="minValueTF" destination="EvP-zP-3j0" id="GI7-Ah-Mio"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RxE-LK-mmq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nq6-3t-gPc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2638" y="-2"/>
+            <point key="canvasLocation" x="2631" y="-2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V7F-4k-Qv0">

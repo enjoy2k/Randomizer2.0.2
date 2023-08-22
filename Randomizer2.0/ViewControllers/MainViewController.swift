@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import Foundation
+
+protocol SettingsViewControllerDelegate {
+    func setNewValues(for minimumNumber: String, and maximumNumber: String)
+}
 
 class MainViewController: UIViewController {
 
@@ -30,9 +35,17 @@ class MainViewController: UIViewController {
         guard let navigationVC = segue.destination as? UINavigationController else { return }
         guard let settingsVC = navigationVC.topViewController as? SettingsViewController else { return }
         settingsVC.randomNumberSt = randomNumber
+        settingsVC.delegate = self
     }
 
     @IBAction func resultButtonPressed() {
         randomValueLabel.text = String(randomNumber.getRandom)
+    }
+}
+
+extension MainViewController: SettingsViewControllerDelegate {
+    func setNewValues(for minimumNumber: String, and maximumNumber: String) {
+        minimumValueLabel.text = minimumNumber
+        maximumValueLabel.text = maximumNumber
     }
 }
