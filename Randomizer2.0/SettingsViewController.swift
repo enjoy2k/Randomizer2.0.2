@@ -26,5 +26,4 @@ class SettingsViewController: UIViewController {
     @IBAction func cancelButtonPressed() {
         dismiss(animated: true)
     }
-    
 }
