@@ -14,6 +14,7 @@
 		88CE18E02A40BDE8001EB99F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CE18DE2A40BDE8001EB99F /* Main.storyboard */; };
 		88CE18E22A40BDE9001EB99F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CE18E12A40BDE9001EB99F /* Assets.xcassets */; };
 		88CE18E52A40BDE9001EB99F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CE18E32A40BDE9001EB99F /* LaunchScreen.storyboard */; };
+		9DD28B662A94B781007C6450 /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD28B652A94B781007C6450 /* RandomNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		88CE18E12A40BDE9001EB99F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88CE18E42A40BDE9001EB99F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88CE18E62A40BDE9001EB99F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DD28B652A94B781007C6450 /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,57 @@
 		88CE18D72A40BDE8001EB99F /* Randomizer2.0 */ = {
 			isa = PBXGroup;
 			children = (
-				88CE18D82A40BDE8001EB99F /* AppDelegate.swift */,
-				88CE18DA2A40BDE8001EB99F /* SceneDelegate.swift */,
-				88CE18DC2A40BDE8001EB99F /* ViewController.swift */,
-				88CE18DE2A40BDE8001EB99F /* Main.storyboard */,
-				884692FA2A40D00600038B23 /* SettingsViewController.swift */,
-				88CE18E12A40BDE9001EB99F /* Assets.xcassets */,
-				88CE18E32A40BDE9001EB99F /* LaunchScreen.storyboard */,
-				88CE18E62A40BDE9001EB99F /* Info.plist */,
+				9DD28B642A94B758007C6450 /* Models */,
+				9DD28B602A94B6F0007C6450 /* App */,
+				9DD28B612A94B71B007C6450 /* ViewControllers */,
+				9DD28B632A94B748007C6450 /* StoryBoards */,
+				9DD28B622A94B731007C6450 /* Soursces */,
 			);
 			path = Randomizer2.0;
+			sourceTree = "<group>";
+		};
+		9DD28B602A94B6F0007C6450 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				88CE18D82A40BDE8001EB99F /* AppDelegate.swift */,
+				88CE18DA2A40BDE8001EB99F /* SceneDelegate.swift */,
+				88CE18E62A40BDE9001EB99F /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9DD28B612A94B71B007C6450 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				88CE18DC2A40BDE8001EB99F /* ViewController.swift */,
+				884692FA2A40D00600038B23 /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9DD28B622A94B731007C6450 /* Soursces */ = {
+			isa = PBXGroup;
+			children = (
+				88CE18E12A40BDE9001EB99F /* Assets.xcassets */,
+			);
+			path = Soursces;
+			sourceTree = "<group>";
+		};
+		9DD28B632A94B748007C6450 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				88CE18DE2A40BDE8001EB99F /* Main.storyboard */,
+				88CE18E32A40BDE9001EB99F /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		9DD28B642A94B758007C6450 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9DD28B652A94B781007C6450 /* RandomNumber.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +186,7 @@
 			files = (
 				88CE18DD2A40BDE8001EB99F /* ViewController.swift in Sources */,
 				88CE18D92A40BDE8001EB99F /* AppDelegate.swift in Sources */,
+				9DD28B662A94B781007C6450 /* RandomNumber.swift in Sources */,
 				88CE18DB2A40BDE8001EB99F /* SceneDelegate.swift in Sources */,
 				884692FB2A40D00600038B23 /* SettingsViewController.swift in Sources */,
 			);
@@ -292,7 +336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Randomizer2.0/Info.plist;
+				INFOPLIST_FILE = Randomizer2.0/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -322,7 +366,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Randomizer2.0/Info.plist;
+				INFOPLIST_FILE = Randomizer2.0/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
