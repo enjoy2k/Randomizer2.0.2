@@ -154,8 +154,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="gVO-ji-nQ9">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="qxH-eZ-78B"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="BdB-SH-evK"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="qxH-eZ-78B">
+                                            <connections>
+                                                <action selector="cancelButtonPressed" destination="kvd-h5-n1H" id="xhQ-7B-OIh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="BdB-SH-evK">
+                                            <connections>
+                                                <action selector="savelButtonPressed" destination="kvd-h5-n1H" id="zWk-lt-gLL"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

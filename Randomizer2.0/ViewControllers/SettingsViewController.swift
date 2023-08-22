@@ -16,9 +16,14 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        minValueTF.text = String(randomNumberSt.minimumValue)
+        maxValueTF.text = String(randomNumberSt.maximumValue)
     }
     
-    
-    
+    @IBAction func cancelButtonPressed() {
+        dismiss(animated: true)
+    }
+    @IBAction func savelButtonPressed() {
+        dismiss(animated: true)
+    }
 }
