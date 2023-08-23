@@ -29,7 +29,8 @@ class SettingsViewController: UIViewController {
         dismiss(animated: true)
     }
     @IBAction func savelButtonPressed() {
-        delegate.setNewValues(for: minValueTF.text ?? "0", and: maxValueTF.text ?? "100")
+        view.endEditing(true)
+        delegate.setNewValues(for: randomNumberSt)
         dismiss(animated: true)
     }
 }
