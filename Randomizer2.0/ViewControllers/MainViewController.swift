@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Foundation
 
 protocol SettingsViewControllerDelegate {
     func setNewValues(for randomNumber: RandomNumber)

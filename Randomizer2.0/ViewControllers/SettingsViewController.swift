@@ -47,5 +47,3 @@ extension SettingsViewController: UITextFieldDelegate {
         }
     }
 }
-
-// Остановился на 2.43
